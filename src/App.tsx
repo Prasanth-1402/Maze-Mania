@@ -133,13 +133,6 @@ export function App(): JSX.Element {
     regenerateMaze(nextWidth, nextHeight, nextDifficulty, false);
   }
 
-  function onGenerateDaily(): void {
-    const next = generateMaze({ width, height, seed: todaySeed(), difficulty });
-    setMaze(next);
-    resetRun();
-    setShowGameplay(false);
-  }
-
   function onCreateMaze(): void {
     regenerateMaze(width, height, difficulty, true);
   }
@@ -240,7 +233,6 @@ export function App(): JSX.Element {
             onHeightChange={onHeightCommit}
             onDifficultyChange={(value) => setDifficulty(value)}
             onCreateMaze={onCreateMaze}
-            onGenerateDaily={onGenerateDaily}
             onGenerateRandom={onGenerateRandom}
           />
         </section>

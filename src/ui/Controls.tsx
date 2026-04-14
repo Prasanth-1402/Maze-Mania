@@ -10,7 +10,6 @@ type ControlsProps = {
   onDifficultyChange: (value: Difficulty) => void;
   onCreateMaze: () => void;
   onGenerateRandom: () => void;
-  onGenerateDaily: () => void;
 };
 
 export function Controls(props: ControlsProps): JSX.Element {
@@ -78,9 +77,6 @@ export function Controls(props: ControlsProps): JSX.Element {
       </label>
       <button type="button" className="btn btn-muted btn-size-difficulty" onClick={props.onCreateMaze}>
         Create Maze
-      </button>
-      <button type="button" className="btn btn-outline" onClick={props.onGenerateDaily}>
-        Daily Maze
       </button>
       <button type="button" className="btn btn-primary" onClick={props.onGenerateRandom}>
         Generate Random
